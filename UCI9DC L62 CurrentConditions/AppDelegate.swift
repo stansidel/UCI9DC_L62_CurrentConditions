@@ -42,5 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    // MARK: - NetworkActivityIndicator
+    var networkActivitiesCount = 0
+
+    func showNetworkActivityIndicator() {
+        networkActivitiesCount += 1
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+
+    func hideNetworkActivityIndicator() {
+        networkActivitiesCount -= 1
+        if networkActivitiesCount <= 0 {
+            networkActivitiesCount = 0
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
+    }
 }
 

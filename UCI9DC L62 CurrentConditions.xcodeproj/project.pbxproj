@@ -12,6 +12,7 @@
 		F64DD4EB1C7C3D1000B5E3B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64DD4E91C7C3D1000B5E3B6 /* Main.storyboard */; };
 		F64DD4ED1C7C3D1000B5E3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64DD4EC1C7C3D1000B5E3B6 /* Assets.xcassets */; };
 		F64DD4F01C7C3D1000B5E3B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64DD4EE1C7C3D1000B5E3B6 /* LaunchScreen.storyboard */; };
+		F6E3502A1C7D9F6D005C9A3A /* WeatherTeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E350291C7D9F6D005C9A3A /* WeatherTeller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F64DD4EC1C7C3D1000B5E3B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F64DD4EF1C7C3D1000B5E3B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F64DD4F11C7C3D1000B5E3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E350291C7D9F6D005C9A3A /* WeatherTeller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTeller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				F64DD4E51C7C3D1000B5E3B6 /* AppDelegate.swift */,
 				F64DD4E71C7C3D1000B5E3B6 /* ViewController.swift */,
 				F64DD4E91C7C3D1000B5E3B6 /* Main.storyboard */,
+				F6E350291C7D9F6D005C9A3A /* WeatherTeller.swift */,
 				F64DD4EC1C7C3D1000B5E3B6 /* Assets.xcassets */,
 				F64DD4EE1C7C3D1000B5E3B6 /* LaunchScreen.storyboard */,
 				F64DD4F11C7C3D1000B5E3B6 /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64DD4E81C7C3D1000B5E3B6 /* ViewController.swift in Sources */,
+				F6E3502A1C7D9F6D005C9A3A /* WeatherTeller.swift in Sources */,
 				F64DD4E61C7C3D1000B5E3B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 				F64DD4F61C7C3D1000B5E3B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

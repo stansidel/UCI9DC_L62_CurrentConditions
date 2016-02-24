@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var ResultLabel: UILabel!
 
@@ -23,14 +23,47 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showConiditions(sender: AnyObject) {
-        guard let city = cityTextField.text else {
+        self.view.endEditing(true)
+        guard let city = cityTextField.text where !city.isEmpty else {
+            self.displayCondition("Enter city to see the weather conditions")
             return
         }
-        guard let url = NSURL(string: "http://www.weather-forecast.com/locations/\(city)/forecasts/latest") else {
-            return
+        let teller = WeatherTeller()
+        teller.tellConditionsForCity(city) { (condition, error) -> Void in
+            if condition != nil {
+                self.displayCondition(condition!)
+            } else {
+                var errStr = "Error occured."
+                if error != nil {
+                    errStr += " \(error!.localizedDescription) \(error!.localizedFailureReason ?? "")"
+                }
+                self.displayError(errStr)
+            }
         }
-//        let session = NSURLSession.dataTaskWithURL(<#T##NSURLSession#>)
     }
 
+    func displayCondition(condition: String) {
+        self.ResultLabel.text = condition
+        self.ResultLabel.textColor = UIColor.blackColor()
+    }
+
+    func displayError(errorText: String) {
+        self.ResultLabel.text = errorText
+        self.ResultLabel.textColor = UIColor.redColor()
+    }
+
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    // MARK: - UITextFieldDelegate
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == cityTextField {
+            textField.resignFirstResponder()
+            showConiditions(textField)
+        }
+        return true
+    }
 }
 
