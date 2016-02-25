@@ -18,8 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="california.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DmW-ed-v8f">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FAA-yC-Wh0">
-                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <rect key="frame" x="20" y="84" width="560" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-K8-8lt">
                                         <rect key="frame" x="0.0" y="0.0" width="514" height="30"/>
@@ -39,19 +42,31 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter city to see the weather conditions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doj-h4-sdh">
-                                <rect key="frame" x="20" y="66" width="560" height="21"/>
+                                <rect key="frame" x="20" y="134" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6i-bd-46U">
+                                <rect key="frame" x="157" y="28" width="286" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FAA-yC-Wh0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8JK-Mf-f0a"/>
+                            <constraint firstItem="W6i-bd-46U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FUy-RQ-P4D"/>
+                            <constraint firstItem="FAA-yC-Wh0" firstAttribute="top" secondItem="W6i-bd-46U" secondAttribute="bottom" constant="20" id="Qmk-lt-BCb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DmW-ed-v8f" secondAttribute="bottom" id="bPD-qe-os8"/>
                             <constraint firstItem="FAA-yC-Wh0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dqP-jl-527"/>
                             <constraint firstItem="Doj-h4-sdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eBg-ut-9tC"/>
-                            <constraint firstItem="Doj-h4-sdh" firstAttribute="top" secondItem="FAA-yC-Wh0" secondAttribute="bottom" constant="8" id="fTo-MX-TPn"/>
+                            <constraint firstItem="Doj-h4-sdh" firstAttribute="top" secondItem="FAA-yC-Wh0" secondAttribute="bottom" constant="20" id="fTo-MX-TPn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FAA-yC-Wh0" secondAttribute="trailing" id="mi2-yG-cCD"/>
+                            <constraint firstItem="W6i-bd-46U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pKd-ku-yvY"/>
+                            <constraint firstAttribute="trailing" secondItem="DmW-ed-v8f" secondAttribute="trailing" id="qmm-eE-mBm"/>
+                            <constraint firstItem="DmW-ed-v8f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rT8-5g-r4o"/>
+                            <constraint firstItem="DmW-ed-v8f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wea-ce-Ujp"/>
                             <constraint firstItem="Doj-h4-sdh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="z4l-G2-Fkl"/>
                         </constraints>
                     </view>
@@ -65,4 +80,7 @@
             <point key="canvasLocation" x="305" y="418"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="california.jpg" width="1600" height="1054"/>
+    </resources>
 </document>
